@@ -1,0 +1,21 @@
+.msgDiv {
+  form {
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+    background-color: #d5dde8;
+
+    input {
+      width: 70vw;
+      height: 35px;
+      border-radius: 8px;
+      margin-right: 5px;
+    }
+
+    button {
+      background: none;
+      border: none;
+      padding-bottom: 6px;
+    }
+  }
+}

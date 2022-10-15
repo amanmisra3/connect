@@ -1,0 +1,39 @@
+.homeContainer {
+  .top {
+    background-color: beige;
+    height: 30vh;
+  }
+
+  .bottom {
+    background-color: rgb(242, 185, 185);
+    height: 70vh;
+  }
+
+  .mainContent {
+    display: flex;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+
+    border: 1px solid red;
+
+    z-index: 20;
+  }
+
+  .leftTab {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: cyan;
+    height: auto;
+    width: 20vw;
+
+    border: 1px solid blue;
+  }
+
+  .rightTab {
+    width: 60vw;
+  }
+}
