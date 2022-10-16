@@ -10,7 +10,7 @@ const SendMessage = (props: any) => {
   const [inputMsg, setInputMsg] = useState("");
   const socket = io();
 
-  console.log(chatMsgs);
+  // console.log(chatMsgs);
   
 
   useEffect(() => {
