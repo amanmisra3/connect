@@ -2,6 +2,7 @@
   "name": "connect",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "scripts": {
     "dev": "next dev",
     "dev:local": "env-cmd -f environments/.env.local npm run dev -- -p 3005",

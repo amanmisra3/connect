@@ -1,11 +1,12 @@
 .homeContainer {
   .top {
-    background-color: beige;
+    background-color: #18252c;
     height: 30vh;
   }
 
   .bottom {
-    background-color: rgb(242, 185, 185);
+    background-color: #18252c;
+    background-color: #18252c;
     height: 70vh;
   }
 
@@ -17,7 +18,7 @@
     margin-right: -50%;
     transform: translate(-50%, -50%);
 
-    border: 1px solid red;
+    border-radius: 20px;
 
     z-index: 20;
   }
@@ -26,11 +27,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: cyan;
+    background-color: #111b21;
     height: auto;
     width: 20vw;
-
-    border: 1px solid blue;
   }
 
   .rightTab {

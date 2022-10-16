@@ -1,0 +1,20 @@
+{
+  "msgs": [
+    {
+      "msg": "Hi",
+      "myMsg": false
+    },
+    {
+      "msg": "How r u?",
+      "myMsg": false
+    },
+    {
+      "msg": "Hi!",
+      "myMsg": true
+    },
+    {
+      "msg": "I am fine",
+      "myMsg": true
+    }
+  ]
+}

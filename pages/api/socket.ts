@@ -1,4 +1,5 @@
 import { Server } from "socket.io";
+import chatMsgs from "utils/chatMsgs.json";
 
 const SocketHandler = (req: any, res: any) => {
   if (res.socket.server.io) {
@@ -14,7 +15,9 @@ const SocketHandler = (req: any, res: any) => {
     socket.emit("msgFromServer", "Hi! I am server");
 
     socket.on("sendMessage", (inputMsg) => {
-      console.log(inputMsg, 'inputMsg socket.ts');
+      // chatMsgs.msgs.push({ msg: inputMsg, myMsg: false });
+      console.log(inputMsg, "inputMsg socket.ts");
+      // console.log(chatMsgs.msgs, "msgs updated");
 
       io.emit("message", inputMsg);
     });

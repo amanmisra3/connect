@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from "react";
-import ChatDisplay from "../../components/HomePage/ChatMessagesDisplay/ChatDisplay";
-import SendMessage from "../../components/HomePage/SendMessage/SendMessage";
+import ChatDisplay from "components/HomePage/ChatMessagesDisplay/ChatDisplay";
+import SendMessage from "components/HomePage/SendMessage/SendMessage";
 import styles from "./homePage.module.scss";
+import chatMsgs from 'utils/chatMsgs.json'
 
 const HomePage = () => {
-  
-  const [msgs, setMsgs] = useState(['Hi', 'How are you'])
+
+  const [msgs, setMsgs] = useState(chatMsgs)
+
 
   return (
     <div className={styles.homeContainer}>
