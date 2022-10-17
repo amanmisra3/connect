@@ -3,15 +3,12 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import styles from "./sendMessage.module.scss";
 import { faPaperPlane } from "@fortawesome/free-solid-svg-icons";
 import io from "socket.io-client";
-import chatMsgs from "utils/chatMsgs.json";
 
-
-const SendMessage = (props: any) => {
+const SendMessage = ({ callAgain, setCallAgain }: any) => {
   const [inputMsg, setInputMsg] = useState("");
   const socket = io();
 
   // console.log(chatMsgs);
-  
 
   useEffect(() => {
     socketInitializer();
@@ -31,10 +28,10 @@ const SendMessage = (props: any) => {
 
   const sendClicked = (e: any) => {
     e.preventDefault();
-    setInputMsg('')
+    setInputMsg("");
     console.log(inputMsg);
     socket.emit("sendMessage", inputMsg);
-    // chatMsgs.msgs.push({ msg: inputMsg, myMsg: true });
+    setCallAgain((callAgain: any) => !callAgain);
   };
 
   const onChangeHandler = (e: any) => {

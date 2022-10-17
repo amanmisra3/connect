@@ -2,12 +2,25 @@ import React, { useEffect, useState } from "react";
 import ChatDisplay from "components/HomePage/ChatMessagesDisplay/ChatDisplay";
 import SendMessage from "components/HomePage/SendMessage/SendMessage";
 import styles from "./homePage.module.scss";
-import chatMsgs from 'utils/chatMsgs.json'
+import axios from "axios";
 
 const HomePage = () => {
+  const [msgs, setMsgs] = useState();
+  const [callAgain, setCallAgain] = useState();
 
-  const [msgs, setMsgs] = useState(chatMsgs)
+  useEffect(() => {
+    axios
+      .get("api/chat")
+      .then(function (response) {
+        setMsgs(response.data);
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+  }, [callAgain]);
 
+  console.log(msgs);
+  console.log(callAgain, 'callAgain');
 
   return (
     <div className={styles.homeContainer}>
@@ -19,7 +32,7 @@ const HomePage = () => {
         <div className={styles.leftTab}>Groups and Chats with Profile</div>
         <div className={styles.rightTab}>
           <ChatDisplay msgs={msgs} />
-          <SendMessage setMsgs={setMsgs} />
+          <SendMessage setCallAgain={setCallAgain} callAgain={callAgain} />
         </div>
       </div>
     </div>

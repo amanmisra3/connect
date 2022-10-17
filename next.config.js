@@ -2,6 +2,10 @@
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
-}
+};
 
-export default nextConfig
+// module.exports = {
+//   pageExtensions: ["mdx", "md", "jsx", "js", "tsx", "ts"],
+// };
+
+export default nextConfig;
